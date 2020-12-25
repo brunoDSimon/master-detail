@@ -2,3 +2,12 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+.element {
+  @include float-left;
+}
+.another-element {
+  @include float-right;
+}
+.one-more {
+  @include float-none;
+}
