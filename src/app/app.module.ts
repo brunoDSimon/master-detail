@@ -1,3 +1,4 @@
+import { DatabaseService } from './shared/service/database.service';
 import { HeaderComponent } from './features/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,10 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     NgbModule,
     IMaskModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule
+    HttpClientInMemoryWebApiModule.forRoot(
+      DatabaseService, { dataEncapsulation: false }
+    )
+
   ],
   providers: [],
   bootstrap: [AppComponent]
